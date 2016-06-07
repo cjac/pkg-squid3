@@ -15,6 +15,7 @@ DEB_INSTALL_DOCS_squid-common := CONTRIBUTORS CREDITS QUICKSTART RELEASENOTES.ht
 						SPONSORS 
 
 DEB_CONFIGURE_EXTRA_FLAGS := BUILDCXXFLAGS="$(CXXFLAGS) $(LDFLAGS)" \
+		--with-openssl --with-gnutls --enable-ssl-crtd --enable-auth \
 		--datadir=/usr/share/squid \
 		--sysconfdir=/etc/squid \
 		--libexecdir=/usr/lib/squid \
